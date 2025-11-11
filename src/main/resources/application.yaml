@@ -1,0 +1,24 @@
+server:
+  port: 8002
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/practice
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 7wtd5e7w
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+#      password: 123456
+
+key:
+  jwt:
+    location: classpath:jwt.jks # 秘钥地址
+    alias: jwt # 秘钥别名
+    password: teamup # 秘钥文件密码
+    tokenTTL: 60m # 登录有效期
+  auth:
+    excludePaths: # 无需登录校验的路径
+      - /api/users/**
+      - /api/consultations/**
