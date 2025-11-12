@@ -1,20 +1,23 @@
 package com.teamup.practice.service.impl;
 
+import cn.hutool.core.util.StrUtil;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.teamup.practice.config.JwtProperties;
 import com.teamup.practice.dto.UserLoginDTO;
 import com.teamup.practice.dto.UserRegisterDTO;
+import com.teamup.practice.dto.query.UserPageQuery;
 import com.teamup.practice.enums.HttpStatusEnum;
 import com.teamup.practice.exception.UserNotFoundException;
 import com.teamup.practice.mapper.ConsultationsMapper;
 import com.teamup.practice.mapper.UserMapper;
-import com.teamup.practice.po.Consultations;
 import com.teamup.practice.po.User;
 import com.teamup.practice.service.UserService;
 import com.teamup.practice.utils.BeanUtil;
 import com.teamup.practice.utils.JwtTool;
 import com.teamup.practice.vo.UserDetailVO;
 import com.teamup.practice.vo.UserLoginVO;
+import com.teamup.practice.vo.page.PageVO;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -68,6 +71,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             throw new UserNotFoundException(HttpStatusEnum.NOT_FOUND.getCode(), "用户不存在");
         }
         return BeanUtil.convert(user, UserDetailVO.class);
+    }
+
+    @Override
+    public PageVO<UserDetailVO> getUsersList(UserPageQuery query) {
+
+
+        Page<User> pageResult = lambdaQuery()
+                .like(StrUtil.isNotBlank(query.getUsername()),User::getUsername, query.getUsername())
+                .like(StrUtil.isNotBlank(query.getEmail()),User::getEmail, query.getEmail())
+                .like(StrUtil.isNotBlank(query.getPhone()),User::getPhone, query.getPhone())
+                .like(StrUtil.isNotBlank(query.getRealName()),User::getRealName, query.getRealName())
+                .page(query.toMpPage(query.getSortBy(),query.getIsAsc()));
+
+
+        return PageVO.of(pageResult, UserDetailVO.class);
     }
 
 

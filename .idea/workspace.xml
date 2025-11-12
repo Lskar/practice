@@ -5,17 +5,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0fd870f-0e21-443c-ad6b-7f136892c353" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ApifoxUploaderProjectSetting.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/BackEnd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/test/test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FrontEnd/FrontEnd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/database.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/BackEnd.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/TeamupPracticeApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/config/AuthProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/config/JwtProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/ConsultationsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/dto/UserLoginDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/dto/UserRegisterDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/enums/HttpStatusEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/enums/IErrorCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/exception/BaseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/exception/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/filter/TokenFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/handler/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/mapper/ConsultationsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/po/Consultations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/po/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/result/ResponseResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/ConsultationsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/impl/ConsultationsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/utils/BeanUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/utils/BeanUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/utils/CarConsultationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/utils/CollUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/utils/Convert.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/utils/JwtTool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/utils/UserContext.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/vo/ConsultationsVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/vo/UserDetailVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/vo/UserLoginVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/db/consultations.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/db/user.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/jwt.jks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/test/java/com/teamup/practice/TeamupPracticeApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/test/test.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,27 +80,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Lenovo/Desktop/sd/TeamPractice-group4-TeamUp/BackEnd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Desktop/sd/TeamPractice-group4-TeamUp/BackEnd&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Desktop\sd\TeamPractice-group4-TeamUp\BackEnd" />
@@ -83,6 +117,13 @@
       <module name="main" />
       <option name="filePath" />
       <method v="2" />
+    </configuration>
+    <configuration name="BackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="BackEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.teamup.practice.BackEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
   </component>
   <component name="SharedIndexes">
@@ -109,6 +150,7 @@
       <workItem from="1762915672985" duration="110000" />
       <workItem from="1762915789001" duration="31000" />
       <workItem from="1762915824968" duration="505000" />
+      <workItem from="1762917740489" duration="206000" />
     </task>
     <servers />
   </component>

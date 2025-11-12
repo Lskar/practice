@@ -7,7 +7,6 @@ import com.teamup.practice.service.UserService;
 import com.teamup.practice.vo.UserDetailVO;
 import com.teamup.practice.vo.UserLoginVO;
 import io.swagger.annotations.Api;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

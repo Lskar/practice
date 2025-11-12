@@ -1,14 +1,16 @@
 package com.teamup.practice.service.impl;
 
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.teamup.practice.dto.query.ConsultationsPageQuery;
 import com.teamup.practice.mapper.ConsultationsMapper;
-import com.teamup.practice.mapper.UserMapper;
 import com.teamup.practice.po.Consultations;
-import com.teamup.practice.po.User;
 import com.teamup.practice.service.ConsultationsService;
 import com.teamup.practice.utils.BeanUtil;
 import com.teamup.practice.vo.ConsultationsVO;
+import com.teamup.practice.vo.page.PageVO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,9 +33,26 @@ public class ConsultationsServiceImpl extends ServiceImpl<ConsultationsMapper, C
     public void addConsultations(ConsultationsVO consultationsVO) {
 
         Consultations consultations = BeanUtil.convert(consultationsVO,Consultations.class);
-        Boolean insert = save(consultations);
+        boolean insert = save(consultations);
         if (!insert) {
             throw new RuntimeException("添加失败");
         }
+    }
+
+    @Override
+    public PageVO<ConsultationsVO> getConsultationsList(ConsultationsPageQuery query) {
+
+        Page<Consultations> pageResult = lambdaQuery()
+                .eq(query.getUserId() != null,Consultations::getUserId,query.getUserId())
+                .like(StrUtil.isNotBlank(query.getTitle()),Consultations::getTitle,query.getTitle())
+                .like(StrUtil.isNotBlank(query.getCarType()),Consultations::getCarType,query.getCarType())
+                .like(StrUtil.isNotBlank(query.getFuelType()),Consultations::getFuelType,query.getFuelType())
+                //TODO 字段属性有问题
+//                .like(Consultations::getAi_model,query.getAi_model())
+                .like(query.getRating()!=null, Consultations::getRating,query.getRating())
+                .page(query.toMpPage(query.getSortBy(),query.getIsAsc()));
+
+
+        return PageVO.of(pageResult, ConsultationsVO.class);
     }
 }

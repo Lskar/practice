@@ -4,9 +4,11 @@ package com.teamup.practice.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.teamup.practice.dto.UserLoginDTO;
 import com.teamup.practice.dto.UserRegisterDTO;
+import com.teamup.practice.dto.query.UserPageQuery;
 import com.teamup.practice.po.User;
 import com.teamup.practice.vo.UserDetailVO;
 import com.teamup.practice.vo.UserLoginVO;
+import com.teamup.practice.vo.page.PageVO;
 
 public interface UserService extends IService<User> {
 
@@ -21,4 +23,6 @@ public interface UserService extends IService<User> {
     void register(UserRegisterDTO requestParam);
 
     UserDetailVO getUserDetail(Long id);
+
+    PageVO<UserDetailVO> getUsersList(UserPageQuery query);
 }

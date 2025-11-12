@@ -1,7 +1,6 @@
 package com.teamup.practice.config;
 
 
-import jdk.jfr.DataAmount;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

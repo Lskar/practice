@@ -1,9 +1,7 @@
 package com.teamup.practice.controller;
 
-import com.teamup.practice.po.Consultations;
 import com.teamup.practice.result.ResponseResult;
 import com.teamup.practice.service.ConsultationsService;
-import com.teamup.practice.utils.BeanUtil;
 import com.teamup.practice.vo.ConsultationsVO;
 import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;

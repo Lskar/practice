@@ -2,8 +2,6 @@ package com.teamup.practice.vo;
 
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 public class UserDetailVO {
 
@@ -19,7 +17,5 @@ public class UserDetailVO {
     String password;
 
     String realName;
-
-
 
 }

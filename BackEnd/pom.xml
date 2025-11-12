@@ -8,11 +8,11 @@
         <version>3.5.7</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.irum.teamup</groupId>
-    <artifactId>teamup-practice</artifactId>
+    <groupId>com.teamup.practice</groupId>
+    <artifactId>BackEnd</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>teamup-practice</name>
-    <description>teamup-practice</description>
+    <name>BackEnd</name>
+    <description>BackEnd</description>
     <url/>
     <licenses>
         <license/>
@@ -174,7 +174,6 @@
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
-
     </dependencies>
 
     <build>

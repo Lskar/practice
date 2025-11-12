@@ -1,12 +1,11 @@
 package com.teamup.practice.vo;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class  ConsultationsVO {
+public class ConsultationsVO {
 
 
     /**
