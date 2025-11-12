@@ -8,7 +8,9 @@ import com.teamup.practice.dto.UserLoginDTO;
 import com.teamup.practice.dto.UserRegisterDTO;
 import com.teamup.practice.dto.query.UserPageQuery;
 import com.teamup.practice.enums.HttpStatusEnum;
+import com.teamup.practice.exception.UserNameExistException;
 import com.teamup.practice.exception.UserNotFoundException;
+import com.teamup.practice.exception.UserSaveErrorException;
 import com.teamup.practice.mapper.ConsultationsMapper;
 import com.teamup.practice.mapper.UserMapper;
 import com.teamup.practice.po.User;
@@ -20,7 +22,14 @@ import com.teamup.practice.vo.UserLoginVO;
 import com.teamup.practice.vo.page.PageVO;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RBloomFilter;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+
+import static com.teamup.practice.constant.RedisCacheConstant.LOCK_USER_REGISTER_KEY;
+import static com.teamup.practice.enums.HttpStatusEnum.BAD_REQUEST;
 
 @Service
 @Slf4j
@@ -34,6 +43,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     private final JwtProperties jwtProperties;
 
     private final ConsultationsMapper consultationsMapper;
+
+    private final RBloomFilter<String> userRegisterCachePenetrationBloomFilter;
+
+    private final RedissonClient redissonClient;
+
+    private final StringRedisTemplate stringRedisTemplate;
+
+
+
 
 
     @Override
@@ -61,7 +79,28 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
     @Override
     public void register(UserRegisterDTO requestParam) {
-        int insert = baseMapper.insert(BeanUtil.convert(requestParam, User.class));
+
+        if (!hasUserName(requestParam.getUsername())) {
+            throw new UserNameExistException(BAD_REQUEST.getCode(),"用户名已存在");
+        }
+        RLock lock = redissonClient.getLock(LOCK_USER_REGISTER_KEY + requestParam.getUsername());
+
+        try {
+            if (lock.tryLock()){
+                int insert = baseMapper.insert(BeanUtil.convert(requestParam, User.class));
+                if (insert <= 0) {
+                    throw new UserSaveErrorException(BAD_REQUEST.getCode(),"用户保存失败");
+                }
+                userRegisterCachePenetrationBloomFilter.add(requestParam.getUsername());
+                return;
+            }
+
+            throw new UserNameExistException(BAD_REQUEST.getCode(),"用户名已存在");
+
+        }finally {
+            lock.unlock();
+        }
+
     }
 
     @Override
@@ -88,5 +127,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return PageVO.of(pageResult, UserDetailVO.class);
     }
 
-
+    public Boolean hasUserName(String username) {
+        return !userRegisterCachePenetrationBloomFilter.contains(username);
+    }
 }
