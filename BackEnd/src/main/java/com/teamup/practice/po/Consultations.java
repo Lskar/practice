@@ -2,6 +2,8 @@ package com.teamup.practice.po;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.teamup.practice.enums.AiModelEnum;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -72,7 +74,7 @@ public class Consultations {
     /**
      * AI模型
      */
-    private Enum ai_model;
+    private AiModelEnum ai_model;
 
 
     /**

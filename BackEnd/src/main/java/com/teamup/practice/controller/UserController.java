@@ -32,6 +32,17 @@ public class UserController {
     public ResponseResult<UserDetailVO> getUserDetail(@PathVariable Long id){
         return ResponseResult.success(userService.getUserDetail(id));
     }
+    
+    /**
+     * 用户注销账号
+     * @param id 用户ID
+     * @return
+     */
+    @DeleteMapping("/{id}")
+    public ResponseResult<Void> deleteUser(@PathVariable Long id) {
+        userService.deleteUser(id);
+        return ResponseResult.success();
+    }
 
 
 

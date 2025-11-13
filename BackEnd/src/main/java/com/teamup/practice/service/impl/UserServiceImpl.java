@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.teamup.practice.config.JwtProperties;
 import com.teamup.practice.dto.UserLoginDTO;
 import com.teamup.practice.dto.UserRegisterDTO;
+import com.teamup.practice.dto.UserUpdateDTO;
 import com.teamup.practice.dto.query.UserPageQuery;
 import com.teamup.practice.enums.HttpStatusEnum;
 import com.teamup.practice.exception.UserNameExistException;
@@ -27,6 +28,7 @@ import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import static com.teamup.practice.constant.RedisCacheConstant.LOCK_USER_REGISTER_KEY;
 import static com.teamup.practice.enums.HttpStatusEnum.BAD_REQUEST;
@@ -125,6 +127,41 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
 
 
         return PageVO.of(pageResult, UserDetailVO.class);
+    }
+    
+    @Override
+    public void updateUser(Long id, UserUpdateDTO userUpdateDTO) {
+        User user = getById(id);
+        if (user == null) {
+            throw new UserNotFoundException(HttpStatusEnum.NOT_FOUND.getCode(), "用户不存在");
+        }
+        
+        // 只更新非空字段
+        if (StringUtils.hasText(userUpdateDTO.getRealName())) {
+            user.setRealName(userUpdateDTO.getRealName());
+        }
+        if (StringUtils.hasText(userUpdateDTO.getPhone())) {
+            user.setPhone(userUpdateDTO.getPhone());
+        }
+        if (StringUtils.hasText(userUpdateDTO.getEmail())) {
+            user.setEmail(userUpdateDTO.getEmail());
+        }
+        
+        updateById(user);
+    }
+    
+    @Override
+    public void deleteUser(Long id) {
+        User user = getById(id);
+        if (user == null) {
+            throw new UserNotFoundException(HttpStatusEnum.NOT_FOUND.getCode(), "用户不存在");
+        }
+        
+        // 删除用户关联的咨询记录
+        consultationsMapper.deleteByUserId(id);
+        
+        // 删除用户
+        removeById(id);
     }
 
     public Boolean hasUserName(String username) {

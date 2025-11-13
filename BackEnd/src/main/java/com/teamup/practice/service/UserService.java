@@ -4,6 +4,7 @@ package com.teamup.practice.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.teamup.practice.dto.UserLoginDTO;
 import com.teamup.practice.dto.UserRegisterDTO;
+import com.teamup.practice.dto.UserUpdateDTO;
 import com.teamup.practice.dto.query.UserPageQuery;
 import com.teamup.practice.po.User;
 import com.teamup.practice.vo.UserDetailVO;
@@ -25,4 +26,8 @@ public interface UserService extends IService<User> {
     UserDetailVO getUserDetail(Long id);
 
     PageVO<UserDetailVO> getUsersList(UserPageQuery query);
+    
+    void updateUser(Long id, UserUpdateDTO userUpdateDTO);
+    
+    void deleteUser(Long id);
 }

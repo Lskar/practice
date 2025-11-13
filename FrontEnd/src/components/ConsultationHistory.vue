@@ -259,14 +259,35 @@ const handleReuse = (item) => {
   ElMessage.success('已复用咨询信息，请修改后提交')
 }
 
-const handleDelete = (id) => {
+const handleDelete = async (id) => {
   ElMessageBox.confirm('确定要删除这条咨询记录吗？', '提示', {
     confirmButtonText: '确定',
     cancelButtonText: '取消',
     type: 'warning'
-  }).then(() => {
-    // 这里应该调用删除API
-    ElMessage.success('删除成功！')
+  }).then(async () => {
+    try {
+      // 调用后端删除API
+      const response = await fetch(`/api/consultations/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        // 从本地状态中移除
+        const index = consultations.value.findIndex(item => item.id === id);
+        if (index !== -1) {
+          consultations.value.splice(index, 1);
+        }
+        ElMessage.success('删除成功！');
+      } else {
+        ElMessage.error('删除失败：' + (await response.text()));
+      }
+    } catch (error) {
+      ElMessage.error('删除失败：' + error.message);
+    }
   }).catch(() => {})
 }
 </script>

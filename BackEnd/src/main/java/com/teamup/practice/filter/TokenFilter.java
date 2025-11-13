@@ -33,6 +33,12 @@ public class TokenFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
+        // 对于OPTIONS请求直接放行，这是CORS预检请求所需要的
+        if ("OPTIONS".equalsIgnoreCase(request.getMethod())) {
+            filterChain.doFilter(servletRequest, servletResponse);
+            return;
+        }
+
         String requestURI = request.getRequestURI();
         String contextPath = request.getContextPath();
 

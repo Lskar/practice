@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0fd870f-0e21-443c-ad6b-7f136892c353" name="更改" comment="添加启动器">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/CarConsultationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/CarConsultationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/ConsultationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/ConsultationsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/dto/query/ConsultationsPageQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/dto/query/ConsultationsPageQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/filter/TokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/filter/TokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/mapper/ConsultationsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/mapper/ConsultationsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/po/Consultations.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/po/Consultations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/ConsultationsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/ConsultationsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/impl/ConsultationsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/impl/ConsultationsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/vo/ConsultationsVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/teamup/practice/vo/ConsultationsVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/components/ConsultationHistory.vue" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/components/ConsultationHistory.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,26 +38,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Lskar"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Lskar&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Lskar/practice.git",
-    "accountId": "33cb82da-2cba-41e5-9eeb-8cbb9672aaec"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lskar/practice.git&quot;,
+    &quot;accountId&quot;: &quot;6366012e-a9d9-4626-af43-2d3d70b7faad&quot;
   }
-}]]></component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="localRepository" value="D:\repository" />
-        <option name="userSettingsFile" value="D:\conf\JDK17\settings.xml" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -52,10 +62,15 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Maven.BackEnd [compile].executor": "Run",
+    "Maven.BackEnd [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.BackEndApplication.executor": "Run",
+    "Spring Boot.BackEndApplication.executor": "Debug",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Lenovo/Desktop/myJavaCollection/TeamPractice-group4-TeamUp",
@@ -67,10 +82,13 @@
     "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Desktop\sd\TeamPractice-group4-TeamUp\BackEnd\src\main\java\com\teamup\practice" />
@@ -95,7 +113,14 @@
     </configuration>
     <configuration name="BackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="BackEnd" />
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.teamup.practice.BackEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="SHORTEN_COMMAND_LINE" value="ARGS_FILE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,8 +129,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
-        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
     </attachedChunks>
   </component>
@@ -127,6 +152,8 @@
       <workItem from="1762915824968" duration="505000" />
       <workItem from="1762917740489" duration="2151000" />
       <workItem from="1762931583230" duration="456000" />
+      <workItem from="1762948549530" duration="9728000" />
+      <workItem from="1763022733082" duration="2508000" />
     </task>
     <task id="LOCAL-00001" summary="修改整个项目结构，添加管理员模块">
       <option name="closed" value="true" />

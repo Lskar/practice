@@ -55,4 +55,21 @@ public class ConsultationsServiceImpl extends ServiceImpl<ConsultationsMapper, C
 
         return PageVO.of(pageResult, ConsultationsVO.class);
     }
+    
+    @Override
+    public void deleteConsultation(Long id, Long userId) {
+        // 检查咨询记录是否存在
+        Consultations consultation = getById(id);
+        if (consultation == null) {
+            throw new RuntimeException("咨询记录不存在");
+        }
+        
+        // 检查是否是该用户自己的记录
+        if (!consultation.getUserId().equals(userId)) {
+            throw new RuntimeException("无权限删除他人的咨询记录");
+        }
+        
+        // 删除记录
+        removeById(id);
+    }
 }

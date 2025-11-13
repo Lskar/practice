@@ -18,4 +18,6 @@ public interface ConsultationsService extends IService<Consultations> {
     void addConsultations(ConsultationsVO consultationsVO);
 
     PageVO<ConsultationsVO> getConsultationsList(ConsultationsPageQuery query);
+    
+    void deleteConsultation(Long id, Long userId);
 }

@@ -1,5 +1,6 @@
 package com.teamup.practice.dto.query;
 
+import com.teamup.practice.enums.AiModelEnum;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -34,7 +35,7 @@ public class ConsultationsPageQuery extends PageQuery{
     /**
      * AI模型
      */
-    private Enum ai_model;
+    private AiModelEnum ai_model;
 
 
     /**

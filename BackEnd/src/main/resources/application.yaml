@@ -4,8 +4,8 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/practice
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 7wtd5e7w
+    username: project
+    password: teamup
   data:
     redis:
       host: 127.0.0.1
@@ -20,5 +20,5 @@ key:
     tokenTTL: 60m # 登录有效期
   auth:
     excludePaths: # 无需登录校验的路径
-      - /api/users/**
-      - /api/consultations/**
+      - /api/users/register
+      - /api/users/login

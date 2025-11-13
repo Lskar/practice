@@ -1,5 +1,6 @@
 package com.teamup.practice.vo;
 
+import com.teamup.practice.enums.AiModelEnum;
 import lombok.Data;
 
 import java.util.List;
@@ -60,7 +61,7 @@ public class ConsultationsVO {
     /**
      * ai模型
      */
-    private Enum ai_model;
+    private AiModelEnum ai_model;
 
 
     /**
